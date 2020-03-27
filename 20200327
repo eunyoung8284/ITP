@@ -1,0 +1,419 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyNu3iYJuqu1woi6Hhe/Ll60",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/eunyoung8284/ITP/blob/submit/20200327\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "pt6fTWCZYuHJ",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "# Dictionaries\n",
+        "d = {\"John Doe\": [20151283, 2015],\n",
+        "     \"Changju Oh\": [20200012, 2020],\n",
+        "     \"Hyeonsoo Lee\":[2019088, 2019]}"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "i5MPgaLsZ8Sg",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 71
+        },
+        "outputId": "a30508c5-861b-476d-df36-1c791ea11d0e"
+      },
+      "source": [
+        "d"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'Changju Oh': [20200012, 2020],\n",
+              " 'Hyeonsoo Lee': [2019088, 2019],\n",
+              " 'John Doe': [20151283, 2015]}"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 2
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ewWd2HucaHaP",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "ee744284-1495-47b2-f7cc-7cdc6bf95356"
+      },
+      "source": [
+        "d.keys()"
+      ],
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "dict_keys(['John Doe', 'Changju Oh', 'Hyeonsoo Lee'])"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 3
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "kpjLGdPBaU1l",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "79e9dc17-c41e-4638-e8f0-6f7487547c7b"
+      },
+      "source": [
+        "d[\"John Doe\"]"
+      ],
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[20151283, 2015]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "OnZrxjd6aey7",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "d[\"Sehun Park\"] = [20161326, 2016]"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "r2rTnCnNarNU",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 89
+        },
+        "outputId": "88972737-c22d-46d2-c474-c5fddb75f71b"
+      },
+      "source": [
+        "d"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'Changju Oh': [20200012, 2020],\n",
+              " 'Hyeonsoo Lee': [2019088, 2019],\n",
+              " 'John Doe': [20151283, 2015],\n",
+              " 'Sehun Park': [20161326, 2016]}"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "VzsMIfbzatow",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        "d.update({\"KyuDong Park\":[20171377, 2017]})"
+      ],
+      "execution_count": 0,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "UJPejtU1bCpn",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 107
+        },
+        "outputId": "afad8443-8a6f-4d90-bab4-bf458a8f04cf"
+      },
+      "source": [
+        "d"
+      ],
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'Changju Oh': [20200012, 2020],\n",
+              " 'Hyeonsoo Lee': [2019088, 2019],\n",
+              " 'John Doe': [20151283, 2015],\n",
+              " 'KyuDong Park': [20171377, 2017],\n",
+              " 'Sehun Park': [20161326, 2016]}"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hCFFX2pLbDe8",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "68a7b619-468a-43d7-9169-b309e742bfe2"
+      },
+      "source": [
+        "# Prime number \n",
+        "def num_Prime(number):\n",
+        "  if number == 2:\n",
+        "    return True\n",
+        "  mode = 0 # False\n",
+        "  for i in range(2, number):\n",
+        "    P = number % i\n",
+        "    if P == 0:\n",
+        "      mode = 1 # Change to \"True\"\n",
+        "  if mode == 1:\n",
+        "    return False\n",
+        "  return True\n",
+        "\n",
+        "print(\"is 2 a prime number?\", num_Prime(2))"
+      ],
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "is 2 a prime number? True\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "GqFtCvn-cu5A",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "ec26d38a-6a08-496c-eacd-bb37809b04f0"
+      },
+      "source": [
+        "# Now use the num_Prime function to count prime numbers in a given interval\n",
+        "# For modular Programming\n",
+        "# count_Primes(2, 5) returns 3 because there are 3 primes (2,3,5) between 2 and 5 (both inclusive)\n",
+        "def count_Primes(num1, num2):\n",
+        "  count = 0 \n",
+        "  for i in range(num1, num2+1):\n",
+        "    if num_Prime(i) == True:\n",
+        "      count = count + 1\n",
+        "  return count \n",
+        "\n",
+        "print(\"Prime number count (2~10)\", count_Primes(2, 10))"
+      ],
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Prime number count (2~10) 4\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "m6lgN9BDeixS",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 53
+        },
+        "outputId": "42e66616-0dfe-4777-db8c-e77e16d052c3"
+      },
+      "source": [
+        "# Fibonacci Series \n",
+        "def fib(num):\n",
+        "  a = 0\n",
+        "  b = 1\n",
+        "  count = 0\n",
+        "  if num <= 0:\n",
+        "    print(\"Plz enter a positive number~~\")\n",
+        "  elif num == 1:\n",
+        "    print(\"Your fibonacci sequence upto \", num, \":\")\n",
+        "  else:\n",
+        "    print(\"Your fibonacci sequence upto\", num, \":\")\n",
+        "    while count < num:\n",
+        "      print(a, end=' , ')\n",
+        "      nth = a + b\n",
+        "      # how to update values\n",
+        "      a = b \n",
+        "      b = nth \n",
+        "      count += 1\n",
+        "print(fib(10))"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Your fibonacci sequence upto 10 :\n",
+            "0 , 1 , 1 , 2 , 3 , 5 , 8 , 13 , 21 , 34 , None\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "GOQQK1j9gty3",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "1b1155b6-d58c-4f2b-a88d-9e1737ad7538"
+      },
+      "source": [
+        "def fib(num):\n",
+        "  a, b = 1,1\n",
+        "  for i in range(num-1):\n",
+        "    a, b = b, a+b\n",
+        "  return a \n",
+        "print(fib(10))\n"
+      ],
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "55\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "-hl-xoj0i-88",
+        "colab_type": "code",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "outputId": "6a602479-0af0-4858-e2c7-05965250c620"
+      },
+      "source": [
+        "# recursive function type\n",
+        "def fib_recursive(num):\n",
+        "  if num == 1 or num == 2:\n",
+        "    return 1\n",
+        "  return fib_recursive(num-1) + fib_recursive(num-2)\n",
+        "print(fib_recursive(5))"
+      ],
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "5\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "3Asvtz45kS_n",
+        "colab_type": "code",
+        "colab": {}
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": 0,
+      "outputs": []
+    }
+  ]
+}
